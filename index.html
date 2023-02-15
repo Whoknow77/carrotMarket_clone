@@ -18,7 +18,7 @@
       <div class="header__inner">
         <div class="header__left">
           <div class="header__logo">
-            <a href="https://www.daangn.com/">
+            <a href="https://www.daangn.com/" class="main__logo">
               <svg
                 width="100"
                 height="28"
@@ -62,31 +62,31 @@
             </a>
           </div>
           <nav class="header__menu">
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="https://www.daangn.com/" class="secondhand orange"
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="https://www.daangn.com/" class="nav__link orange"
                   >중고거래</a
                 >
               </li>
-              <li class="nav_item">
+              <li class="nav__item">
                 <a
                   href="https://www.daangn.com/kr/nearby-stores/"
-                  class="neighbor"
+                  class="nav__link"
                   >동네가게</a
                 >
               </li>
-              <li class="nav_item">
-                <a href="https://www.daangn.com/kr/jobs/" class="parttime"
+              <li class="nav__item">
+                <a href="https://www.daangn.com/kr/jobs/" class="nav__link"
                   >알바</a
                 >
               </li>
-              <li class="nav_item">
-                <a href="https://www.daangn.com/kr/realty/" class="estate"
+              <li class="nav__item">
+                <a href="https://www.daangn.com/kr/realty/" class="nav__link"
                   >부동산 직거래</a
                 >
               </li>
-              <li class="nav_item">
-                <a href="https://www.daangn.com/kr/car/" class="car"
+              <li class="nav__item">
+                <a href="https://www.daangn.com/kr/car/" class="nav__link"
                   >중고차 직거래</a
                 >
               </li>
@@ -94,7 +94,8 @@
           </nav>
         </div>
         <div class="header__right">
-          <button class="searchbtn">
+          <!-- 모바일 버튼-->
+          <button class="m__btn__search" type="button">
             <svg
               width="24"
               height="24"
@@ -110,7 +111,7 @@
               ></path>
             </svg>
           </button>
-          <button class="morebtn">
+          <button class="m__btn__more" type="button">
             <svg
               width="24"
               height="24"
@@ -138,59 +139,81 @@
               ></path>
             </svg>
           </button>
+
           <input
             type="text"
             class="search__text"
             placeholder="물품이나 동네를 검색해보세요"
           />
-          <button type="button" class="chat__button">채팅하기</button>
+          <button type="button" class="btn__chat">채팅하기</button>
         </div>
       </div>
     </header>
 
     <!-- Section -->
-    <section class="section_title1">
-      <div class="global-width">
-        <div class="text">
-          <h1>당신 근처의 당근마켓</h1>
-          <span
-            >중고 거래부터 동네 정보까지, 이웃과 함께해 가깝고 따뜻한 당신의
-            근처를 만들어요.</span
-          >
-        </div>
-        <div class="photo">
-          <img
-            srcset="
-              https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-d6869a79bc4cb58ea59aa5a408decfdf4a4ba60ac639837081da12861083cdbb.webp
-            "
-            class="home-main-image-top"
-            alt="중고거래, 동네생활 질문글과 동네가게"
-            src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-68ba12f0da7b5af9a574ed92ca8b3a9c0068db176b566dd374ee50359693358b.png"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="section_title2">
-      <div class="photo">
+    <section class="section__top">
+      <div class="top__inner">
+        <h1 class="top__title">
+          당신 근처의
+          <br />
+          당근마켓
+        </h1>
+        <p class="top__text">
+          중고 거래부터 동네 정보까지, 이웃과 함께해
+          <br />
+          가깝고 따뜻한 당신의 근처를 만들어요.
+        </p>
+
         <img
           srcset="
-            https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-cc678e9a217b96f5cb459f7f0684f5ba67706f9889801618b8cf879fbc2c0ea7.webp
+            https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-d6869a79bc4cb58ea59aa5a408decfdf4a4ba60ac639837081da12861083cdbb.webp
           "
-          class="home-main-image-01"
-          alt="우리동네 중고 직거래 사진"
-          src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-39ac203e8922f615aa3843337871cb654b81269e872494128bf08236157c5f6a.png"
+          class="top__img"
+          alt="중고거래, 동네생활 질문글과 동네가게"
+          src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-68ba12f0da7b5af9a574ed92ca8b3a9c0068db176b566dd374ee50359693358b.png"
         />
       </div>
-      <div class="text">
-        <h1>우리 동네 중고 직거래 마켓</h1>
-        <span>동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.</span>
-        <div class="popular_trustworthy">
-          <button class="popular_item">인기매물 보기</button>
-          <button class="trustworthy">믿을수 있는 중고거래</button>
+    </section>
+    <section class="section__middle1">
+      <div class="middle1__inner">
+        <div class="middle1__photo">
+          <img
+            srcset="
+              https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-cc678e9a217b96f5cb459f7f0684f5ba67706f9889801618b8cf879fbc2c0ea7.webp
+            "
+            class="middle1__img"
+            alt="우리동네 중고 직거래 사진"
+            src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-1-39ac203e8922f615aa3843337871cb654b81269e872494128bf08236157c5f6a.png"
+          />
+        </div>
+        <div class="middle1__content">
+          <h1 class="middle1__title">
+            우리 동네
+            <br />
+            중고 직거래 마켓
+          </h1>
+          <p class="middle1__text">
+            동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.
+          </p>
+          <div class="middle1__btns">
+            <a
+              href="https://www.daangn.com/hot_articles"
+              class="btn__popular"
+              type="button"
+              >인기매물 보기</a
+            >
+            <a
+              href="https://www.daangn.com/trust"
+              class="btn__trust"
+              type="button"
+            >
+              믿을수 있는 중고거래
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section_title3">
+    <section class="section_middle2">
       <div class="text">
         <h1>이웃과 함께 하는 동네생활</h1>
         <span>우리 동네의 다양한 이야기를 이웃과 함께 나누어요.</span>
@@ -230,7 +253,7 @@
         />
       </div>
     </section>
-    <section class="section_title4">
+    <section class="section_bottom">
       <div class="photo">
         <img
           srcset="
