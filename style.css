@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
 }
 body {
   margin: 0 auto;
-  padding: 0;
 }
 
 li {
@@ -14,6 +16,7 @@ a {
   text-decoration: none;
 }
 
+/* header */
 .header {
   z-index: 999;
   width: 100%;
@@ -154,6 +157,7 @@ a {
   line-height: 1.5;
 }
 
+/* middle1 */
 .section__middle1 {
   padding: 60px 0;
 }
@@ -210,4 +214,128 @@ a {
 .btn__popular:hover,
 .btn__trust:hover {
   background: #008c72;
+}
+
+/* middle2 */
+
+.section__middle2 {
+  padding: 50px 0;
+  background-color: #e6f3e6;
+}
+
+.middle2__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.middle2__title {
+  font-weight: 700;
+  line-height: 1.4;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.middle2__text {
+  line-height: 1.5;
+  padding-bottom: 60px;
+}
+
+.middle2__story {
+  display: flex;
+  align-items: center;
+}
+
+.story__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+/* 아이콘 */
+.story__icon {
+  width: 56px;
+  height: 56px;
+}
+
+.question__icon {
+  background-image: url(./img/question.svg);
+}
+
+.center__icon {
+  background-image: url(./img/center.svg);
+}
+
+.class__icon {
+  background-image: url(./img/class.svg);
+}
+
+.story__icon {
+  margin-bottom: 15px;
+}
+
+/* 아이콘 소제목 */
+.story__title {
+  font-weight: 550;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* 아이콘 내용 */
+.story__text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.middle2__img {
+  position: relative;
+  top: 25px;
+  width: 546px;
+  height: 740px;
+}
+
+/* bottom */
+
+.section__bottom {
+  padding: 80px 0;
+}
+
+.bottom__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.bottom__img {
+  width: 526px;
+  height: 735px;
+}
+
+.bottom__title {
+  font-weight: 700;
+  line-height: 1.35;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.bottom__text {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn__market {
+  background-color: #f1f3f5;
+  color: #212529;
+  border: none;
+  border-radius: 6px;
+  padding: 18px 23px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn__market:hover {
+  background: #d1d3df;
 }
