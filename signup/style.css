@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(228, 66, 47, 1) 0%,
+    rgba(236, 146, 24, 0.8792309159992122) 61%
+  );
+}
+
+.wrapper {
+  margin: 150px auto 0 auto;
+  width: 450px;
+  height: 600px;
+  background: white;
+}
+
+header {
+  padding-top: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.forget {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.btn__forget {
+  position: absolute;
+  left: 25px;
+  color: red;
+  text-decoration: none;
+}
+
+.id__login,
+.pw__login,
+.id__signup,
+.pw__signup {
+  padding: 5px;
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+.btn__submit,
+.btn__signup,
+.btn__signupsubmit {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(228, 66, 47, 1) 0%,
+    rgba(236, 146, 24, 0.8792309159992122) 61%
+  );
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  border: none;
+  outline: none;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit,
+.signup,
+.submit__signup {
+  margin: 10 auto 0 auto;
+}
+
+.signup__form {
+  padding-top: 200px;
+  display: none;
+}
+
+.errorid {
+  padding: 10px;
+  margin-left: 15px;
+  text-align: left;
+  left: 10px;
+  font-size: 12px;
+  color: red;
+  display: none;
+}
+
+.errorid.block {
+  display: block;
+}
+
+.signup__idinput {
+  position: relative;
+}
+
+.duplication {
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  outline: none;
+  position: absolute;
+  right: 25;
+  top: 15px;
+}
+
+.duplication.none {
+  display: none;
+}
+
+.warn__dupid,
+.nodupid {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 52;
+  top: 20;
+  display: none;
+}
+
+.warn__dupid.block,
+.nodupid.block {
+  display: block;
+}
