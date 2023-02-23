@@ -99,7 +99,8 @@ form {
   display: none;
 }
 
-.errorid {
+.errorid,
+.errorpw {
   padding: 10px;
   margin-left: 15px;
   text-align: left;
@@ -109,7 +110,8 @@ form {
   display: none;
 }
 
-.errorid.block {
+.errorid.block,
+.errorpw.block {
   display: block;
 }
 

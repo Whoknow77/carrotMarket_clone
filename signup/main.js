@@ -6,6 +6,7 @@ const signupBtn = document.querySelector(".signup"); // 회원가입 시작 버�
 const signupSubmit = document.querySelector(".btn__signupsubmit"); // 회원가입 완료 버튼
 const loginSubmit = document.querySelector(".btn__submit"); // 로그인 버튼
 const errorid = document.querySelector(".errorid"); // 아이디 / 비밀번호 틀렸을때
+const errorpw = document.querySelector(".errorpw"); // 비밀번호 틀렸을때
 const duplicateBtn = document.querySelector(".duplication"); // 중복 확인버튼
 const warnid = document.querySelector(".warn__dupid"); // 중복일때 메시지
 const warnNodupid = document.querySelector(".nodupid"); // 중복 확인이 안됐는데 회원가입 한 경우
@@ -38,7 +39,7 @@ function submitSignUp(e) {
   return;
 }
 
-function errorLogin() {
+function errorId() {
   errorid.classList.add("block");
   function hide() {
     errorid.classList.remove("block");
@@ -46,29 +47,35 @@ function errorLogin() {
   setTimeout(hide, 1000);
 }
 
+function errorPw() {
+  errorpw.classList.add("block");
+  function hide() {
+    errorpw.classList.remove("block");
+  }
+  setTimeout(hide, 1000);
+}
+
 function login(e) {
   e.preventDefault();
-  if (e.target.value === "login" || e.keyCode === 13) {
-    // 마우스로 누르거나 엔터 누를때만 로그인
-    const id = loginForm.querySelector("[name=username]");
-    const pw = loginForm.querySelector("[name=password]");
-    const localpw = localStorage.getItem(id.value);
-    if (localpw) {
-      if (localpw === pw.value) {
-        location.href = "/carrotMarket_clone/index.html";
-        return;
-      } else {
-        id.value = "";
-        pw.value = "";
-        errorLogin();
-        return;
-      }
+
+  const id = loginForm.querySelector("[name=username]");
+  const pw = loginForm.querySelector("[name=password]");
+  const localpw = localStorage.getItem(id.value);
+  if (localpw) {
+    if (localpw === pw.value) {
+      location.href = "/carrotMarket_clone/index.html";
+      return;
     } else {
       id.value = "";
       pw.value = "";
-      errorLogin();
+      errorPw();
       return;
     }
+  } else {
+    id.value = "";
+    pw.value = "";
+    errorId();
+    return;
   }
 }
 
