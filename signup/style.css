@@ -28,10 +28,10 @@ header {
 
 h2 {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 form {
-  padding-top: 50px;
   text-align: center;
 }
 
@@ -41,6 +41,10 @@ form {
 }
 
 .btn__forget {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
   position: absolute;
   left: 25px;
   color: red;
@@ -50,7 +54,8 @@ form {
 .id__login,
 .pw__login,
 .id__signup,
-.pw__signup {
+.pw__signup,
+.pwfind__id {
   padding: 5px;
   width: 400px;
   height: 50px;
@@ -85,7 +90,8 @@ form {
 .submit,
 .signup,
 .submit__signup {
-  margin: 10 auto 0 auto;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .signup__form {
@@ -141,4 +147,27 @@ form {
 .warn__dupid.block,
 .nodupid.block {
   display: block;
+}
+
+.pwfind__form {
+  color: black;
+  display: none;
+}
+
+.pwfind__form.block {
+  display: block;
+}
+
+.pwfind__submit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  color: blueviolet;
+}
+
+#found__pw {
+  color: red;
+  font-size: 12px;
+  padding: 5px 0 5px 0;
 }
