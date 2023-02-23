@@ -85,8 +85,8 @@
             />
           </div>
           <div class="forget">
-            <p class="errorid">계정을 정확하게 입력해 주세요.</p>
-            <p class="errorpw">비밀번호가 틀렸습니다.</p>
+            <span class="errorid">계정을 정확하게 입력해 주세요.</span>
+            <span class="errorpw">비밀번호가 틀렸습니다.</span>
             <button type="button" class="btn__forget">Forget password?</button>
           </div>
         </form>
@@ -103,37 +103,64 @@
           <input type="submit" value="비밀번호 찾기" class="pwfind__submit" />
         </form>
 
-        <div class="submit">
-          <input type="submit" value="login" class="btn__submit" />
-        </div>
-        `
-        <div class="signup">
-          <button type="button" class="btn__signup">회원가입</button>
-        </div>
+        <section class="submit__and__signup">
+          <div class="submit">
+            <input type="submit" value="login" class="btn__submit" />
+          </div>
+          <div class="signup">
+            <button type="button" class="btn__signup">회원가입</button>
+          </div>
+        </section>
       </div>
 
       <!-- 회원가입 폼-->
       <form action="" class="signup__form">
         <div class="signup__idinput">
-          <input
-            class="id__signup"
-            type="text"
-            name="username"
-            placeholder="ID"
-          />
-          <p class="warn__dupid">중복된 아이디 입니다.</p>
-          <p class="nodupid">중복 확인을 하세요.</p>
+          <div class="id__input">
+            <input
+              class="id__signup"
+              type="text"
+              name="username"
+              placeholder="ID"
+            />
+            <span class="warn__id1"></span>
+            <span class="warn__id2"></span>
+          </div>
+
+          <div class="pw__input">
+            <input
+              class="pw__signup"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <span class="warn__pwd1"></span>
+            <span class="warn__pwd2"></span>
+          </div>
+
           <button class="duplication">중복확인</button>
+          <div class="email__input">
+            <input
+              class="id__signup"
+              type="text"
+              name="email"
+              placeholder="email"
+            />
+          </div>
+          <span class="warn__email"></span>
+          <div class="mobile__input">
+            <span class="phone__title">phone:</span>
+            <select id="mobile1" class="mobile">
+              <option value="">선택</option>
+              <option value="011">010</option>
+              <option value="016">016</option>
+              <option value="016">011</option></select
+            >- <input type="text" id="mobile2" class="mobile" size="4" />-
+            <input type="text" id="mobile3" class="mobile" size="4" />
+            <span class="warn__phone"></span>
+          </div>
         </div>
 
-        <div>
-          <input
-            class="pw__signup"
-            type="password"
-            name="password"
-            placeholder="Password"
-          />
-        </div>
         <div class="submit__signup">
           <input type="submit" value="회원가입완료" class="btn__signupsubmit" />
         </div>

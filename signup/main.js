@@ -8,8 +8,12 @@ const loginSubmit = document.querySelector(".btn__submit"); // 로그인 버튼
 const errorid = document.querySelector(".errorid"); // 아이디 / 비밀번호 틀렸을때
 const errorpw = document.querySelector(".errorpw"); // 비밀번호 틀렸을때
 const duplicateBtn = document.querySelector(".duplication"); // 중복 확인버튼
-const warnid = document.querySelector(".warn__dupid"); // 중복일때 메시지
-const warnNodupid = document.querySelector(".nodupid"); // 중복 확인이 안됐는데 회원가입 한 경우
+const warnId1 = document.querySelector(".warn__id1"); // 중복일때 메시지
+const warnId2 = document.querySelector(".warn__id2"); // 중복 확인이 안됐는데 회원가입 한 경우
+const warnPwd1 = document.querySelector(".warn__pwd1"); // 중복 비밀번호
+const warnPwd2 = document.querySelector(".warn__pwd2"); // 중복 비밀번호
+const warnEmail = document.querySelector(".warn__email"); // 중복 이메일
+const warnPhone = document.querySelector(".warn__phone"); // 중복 핸드폰 번호
 const forgetpw = document.querySelector(".btn__forget"); // 비밀번호 찾기
 const pwfindSubmitBtn = document.querySelector(".pwfind__submit"); // 비밀번호 찾기
 let dupFlag = false;
@@ -24,18 +28,7 @@ function opensignupForm(e) {
 
 function submitSignUp(e) {
   e.preventDefault();
-  const id = signupForm.querySelector("[name=username]").value;
-  const pw = signupForm.querySelector("[name=password]").value;
-  window.localStorage.setItem(id, pw);
-  if (dupFlag) {
-    signupForm.style.display = "none";
-    loginForm.style.display = "block";
-  }
-  warnNodupid.classList.add("block");
-  function hide() {
-    warnNodupid.classList.remove("block");
-  }
-  setTimeout(hide, 1000);
+  signupCheck();
   return;
 }
 
@@ -88,9 +81,9 @@ function duplicateCheck(e) {
     for (let i = 0; i < localStorage.length; i++) {
       if (localStorage.key(i) === id) {
         signupForm.querySelector("[name=username]").value = "";
-        warnid.classList.add("block");
+        warnId1.innerText = "중복된 아이디 입니다.";
         function hide() {
-          warnid.classList.remove("block");
+          warnId1.innerText = "";
         }
         setTimeout(hide, 1000);
         return;
@@ -104,8 +97,6 @@ function findpw(e) {
   e.preventDefault();
   findForm.classList.toggle("block");
 }
-
-function hideWarn() {}
 
 function pwfindSubmit(e) {
   e.preventDefault();
@@ -127,6 +118,73 @@ function pwfindSubmit(e) {
     id.value = "";
   }
   setTimeout(hide, 1000);
+}
+
+function signupCheck() {
+  const id = signupForm.querySelector("[namze=username]");
+  const pwd = signupForm.querySelector("[name=password]");
+  const email = signupForm.querySelector("[name=email]");
+  const mobile1 = signupForm.querySelector("[id=mobile1]");
+  const mobile2 = signupForm.querySelector("[id=mobile2]");
+  const mobile3 = signupForm.querySelector("[id=mobile3]");
+
+  // 중복확인
+  if (!dupFlag) {
+    warnId2.innerText = "중복확인을 해야합니다.";
+    function hide() {
+      warnId2.innerText = "";
+    }
+    setTimeout(hide, 1000);
+  }
+
+  // 비밀번호
+  const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,}$/;
+  if (pwd.value === "") {
+    warnPwd1.innerText =
+      "비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.";
+    function hide() {
+      warnPwd1.innerText = "";
+    }
+    setTimeout(hide, 1000);
+    pwd.focus();
+    return false;
+  }
+  if (pwd.value.search(" ") != -1) {
+    warnPwd2.innerText = "비밀번호는 공백을 포함할 수 없습니다.";
+    function hide() {
+      warnPwd2.innerText = "";
+    }
+    setTimeout(hide, 1000);
+    pwd.focus();
+    return false;
+  }
+
+  // 이메일
+  const emailCheck = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+  if (!emailCheck.test(email.value)) {
+    warnEmail.innerText =
+      "이메일 형식은 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식입니다.";
+    function hide() {
+      warnEmail.innerText = "";
+    }
+    setTimeout(hide, 1000);
+    email.focus();
+    return false;
+  }
+
+  // 핸드폰
+  const phoneCheck = /^\d{3,4}$/;
+  console.log(!phoneCheck.test(mobile2.value), mobile2.value);
+  console.log(!phoneCheck.test(mobile3.value), mobile3.value);
+  if (!phoneCheck.test(mobile2.value) && !phoneCheck.test(mobile3.value)) {
+    warnPhone.innerText = "전화번호는 3~4자리의 숫자만 입력할 수 있습니다.";
+    function hide() {
+      warnPhone.innerText = "";
+    }
+    setTimeout(hide, 1000);
+    return false;
+  }
 }
 
 signupBtn.addEventListener("click", opensignupForm); // 회원가입 시작 버튼
