@@ -41,10 +41,10 @@ function login(e) {
     if (localPw === pw.value) {
       location.href = "/carrotMarket_clone/index.html";
     } else {
-      errorLogin("id");
+      errorLogin("pw");
     }
   } else {
-    errorLogin("pw");
+    errorLogin("id");
   }
   id.value = "";
   pw.value = "";
