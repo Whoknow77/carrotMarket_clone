@@ -25,7 +25,6 @@
 기능들을 여러 조건에 맞춰서 나열해 보았다.
 
 유저의 데이터들은 로컬 스토리지를 사용해 저장하고 불러왔다.
-<img src="https://i.postimg.cc/PrWWcsD1/image.png">
 
 ## 기능
 
