@@ -35,12 +35,21 @@ form {
   text-align: center;
 }
 
-.forget {
+.pwfind {
   margin-bottom: 30px;
   position: relative;
 }
 
-.btn__forget {
+.pwfind__form {
+  color: black;
+  display: none;
+}
+
+.pwfind__form.block {
+  display: block;
+}
+
+.btn__pwfind {
   cursor: pointer;
   outline: none;
   border: none;
@@ -51,10 +60,25 @@ form {
   left: 28;
 }
 
-.id__login,
-.pw__login,
-.id__signup,
-.pw__signup,
+.pwfind__submit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  color: orangered;
+}
+
+.pwfind__warn {
+  color: red;
+  font-size: 12px;
+  padding: 5px 0 5px 0;
+}
+
+.login__id,
+.login__pw,
+.signup__id,
+.signup__pw,
+.signup__email,
 .pwfind__id {
   padding: 5px;
   width: 400px;
@@ -65,9 +89,14 @@ form {
   margin-bottom: 15px;
 }
 
-.btn__submit,
+.login__and__signup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login__submit,
 .btn__signup,
-.btn__signupsubmit {
+.signup__submit {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -85,36 +114,28 @@ form {
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.submit__and__signup {
-  margin-top: 50px;
-}
-
-.submit,
-.signup,
-.submit__signup {
-  text-align: center;
   margin-top: 10px;
 }
 
-.signup__form {
-  padding-top: 50px;
-  display: none;
-}
-
-.warn__login {
+.login__warn {
   padding: 10px;
-  margin-left: 15px;
-  left: 10px;
   font-size: 12px;
-  float: right;
   color: red;
-  position: inline-block;
+  display: inline-block;
 }
 
-.signup__idinput {
+.signup__form {
+  display: none;
   position: relative;
+}
+
+.signup__id__warn,
+.signup__pw__warn,
+.signup__mobile__warn,
+.signup__email__warn {
+  color: red;
+  font-size: 12px;
+  position: absolute;
 }
 
 .duplication {
@@ -134,69 +155,29 @@ form {
   display: none;
 }
 
-.warn__id,
-.warn__pwd1,
-.warn__pwd2,
-.warn__email,
-.warn__phone,
-.ok__id {
-  color: red;
-  font-size: 12px;
-  position: absolute;
-}
-
-.warn__id {
+.signup__id__warn {
   top: 20;
   right: 110;
 }
 
-.warn__pwd1,
-.warn__pwd2 {
+.signup__pw__warn {
   top: 85;
   left: 101;
 }
 
-.warn__email {
+.signup__email__warn {
   top: 150;
   left: 68;
 }
 
-.warn__phone {
-  left: 126px;
+.signup__mobile__warn {
   top: 220px;
-}
-
-.pwfind__form {
-  color: black;
-  display: none;
-}
-
-.pwfind__form.block {
-  display: block;
-}
-
-.pwfind__submit {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: none;
-  color: blueviolet;
-}
-
-.pwfind__warn {
-  color: red;
-  font-size: 12px;
-  padding: 5px 0 5px 0;
+  left: 126px;
 }
 
 .mobile__input {
-  text-align: left;
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-.phone__title {
-  color: gray;
-  font-size: 14px;
+  display: flex;
+  margin: 0 0 30px 30px;
 }
 
 .mobile {
@@ -204,4 +185,9 @@ form {
   outline: none;
   border-bottom: 1px solid gray;
   margin: 0 5px;
+}
+
+.mobile__title {
+  color: gray;
+  font-size: 14px;
 }

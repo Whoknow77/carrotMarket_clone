@@ -65,11 +65,13 @@
           </a>
         </h2>
       </header>
+
+      <!-- 로그인 폼 -->
       <div class="login__form">
-        <form action="" class="login__info">
+        <form>
           <div>
             <input
-              class="id__login"
+              class="login__id"
               type="text"
               name="username"
               placeholder="ID"
@@ -78,18 +80,17 @@
 
           <div>
             <input
-              class="pw__login"
+              class="login__pw"
               type="password"
               name="password"
               placeholder="Password"
             />
           </div>
-          <div class="forget">
-            <span class="warn__login"></span>
-            <button type="button" class="btn__forget">Forget password?</button>
+          <div class="pwfind">
+            <button type="button" class="btn__pwfind">Forget password?</button>
           </div>
+          <p class="login__warn"></p>
         </form>
-
         <!-- 비밀번호 찾기 폼-->
         <form action="" class="pwfind__form">
           <input
@@ -101,67 +102,60 @@
           <p class="pwfind__warn"></p>
           <input type="submit" value="비밀번호 찾기" class="pwfind__submit" />
         </form>
-
-        <section class="submit__and__signup">
-          <div class="submit">
-            <input type="submit" value="login" class="btn__submit" />
-          </div>
-          <div class="signup">
-            <button type="button" class="btn__signup">회원가입</button>
-          </div>
+        <section class="login__and__signup">
+          <input type="submit" value="login" class="login__submit" />
+          <button type="button" class="btn__signup">회원가입</button>
         </section>
       </div>
 
       <!-- 회원가입 폼-->
       <form action="" class="signup__form">
         <div class="signup__idinput">
-          <div class="id__input">
+          <div>
             <input
-              class="id__signup"
+              class="signup__id"
               type="text"
               name="username"
               placeholder="ID"
             />
-            <span class="warn__id"></span>
+            <p class="signup__id__warn"></p>
           </div>
 
-          <div class="pw__input">
+          <button class="duplication">중복확인</button>
+          <div>
             <input
-              class="pw__signup"
+              class="signup__pw"
               type="password"
               name="password"
               placeholder="Password"
             />
-            <span class="warn__pwd1"></span>
-            <span class="warn__pwd2"></span>
+            <p class="signup__pw__warn"></p>
           </div>
 
-          <button class="duplication">중복확인</button>
-          <div class="email__input">
+          <div>
             <input
-              class="id__signup"
+              class="signup__email"
               type="text"
               name="email"
               placeholder="email"
             />
+            <p class="signup__email__warn"></p>
           </div>
-          <span class="warn__email"></span>
+
           <div class="mobile__input">
-            <span class="phone__title">phone:</span>
-            <select id="mobile1" class="mobile">
+            <p class="mobile__title">phone:</p>
+            <select class="mobile mobile1">
               <option value="">선택</option>
               <option value="011">010</option>
               <option value="016">016</option>
               <option value="016">011</option></select
-            >- <input type="text" id="mobile2" class="mobile" size="4" />-
-            <input type="text" id="mobile3" class="mobile" size="4" />
-            <span class="warn__phone"></span>
+            >- <input type="text" class="mobile mobile2" size="4" />-
+            <input type="text" class="mobile mobile3" size="4" />
+            <p class="signup__mobile__warn"></p>
           </div>
         </div>
 
-        <div class="submit__signup">
-          <input type="submit" value="회원가입완료" class="btn__signupsubmit" />
-        </div>
+        <input type="submit" value="회원가입완료" class="signup__submit" />
       </form>
     </div>
   </body>
