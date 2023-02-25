@@ -103,8 +103,7 @@ form {
   display: none;
 }
 
-.errorid,
-.errorpw {
+.warn__login {
   padding: 10px;
   margin-left: 15px;
   left: 10px;
@@ -112,12 +111,6 @@ form {
   float: right;
   color: red;
   position: inline-block;
-  display: none;
-}
-
-.errorid.block,
-.errorpw.block {
-  display: block;
 }
 
 .signup__idinput {
@@ -141,21 +134,20 @@ form {
   display: none;
 }
 
-.warn__id1,
-.warn__id2,
+.warn__id,
 .warn__pwd1,
 .warn__pwd2,
 .warn__email,
-.warn__phone {
+.warn__phone,
+.ok__id {
   color: red;
   font-size: 12px;
   position: absolute;
 }
 
-.warn__id1,
-.warn__id2 {
+.warn__id {
   top: 20;
-  left: 52;
+  right: 110;
 }
 
 .warn__pwd1,
@@ -191,7 +183,7 @@ form {
   color: blueviolet;
 }
 
-#found__pw {
+.pwfind__warn {
   color: red;
   font-size: 12px;
   padding: 5px 0 5px 0;
