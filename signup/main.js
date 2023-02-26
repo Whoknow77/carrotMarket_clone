@@ -96,7 +96,7 @@ function openSignup(e) {
   loginForm.style.display = "none";
 }
 
-// 회원가입 완료
+// 회원가입 제출
 function submitSignUp(e) {
   e.preventDefault();
   signupCheck();
