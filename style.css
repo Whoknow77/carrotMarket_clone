@@ -34,7 +34,6 @@ a {
 }
 
 .header__left {
-  margin-right: 80px;
   display: flex;
   align-items: center;
 }
@@ -42,6 +41,10 @@ a {
 .header__right {
   display: flex;
   align-items: center;
+}
+
+.main__logo {
+  display: block;
 }
 
 .header__logo {
