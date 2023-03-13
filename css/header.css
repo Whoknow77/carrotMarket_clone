@@ -1,0 +1,147 @@
+/* header */
+.header {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+
+.header__inner {
+  max-width: 1200px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.main__logo {
+  display: block;
+}
+
+.header__logo {
+  padding-right: 40px;
+}
+
+.header__menu {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav__item:not(:last-of-type) {
+  padding-right: 30px;
+}
+
+.nav__link {
+  color: #4d5159;
+}
+
+.nav__item .orange {
+  color: #ff6f0f;
+}
+
+.nav__link:hover:not(.orange) {
+  color: #008c72;
+}
+
+.btn__signup {
+  height: 40px;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #d1d3df;
+  border-radius: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.btn__signup:hover {
+  background-color: #eaebee;
+  opacity: 0.5;
+}
+
+.m__btn__search {
+  display: none;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.m__btn__more {
+  background: none;
+  cursor: pointer;
+  display: none;
+  border: 0;
+  padding-left: 15px;
+}
+
+.search__text {
+  display: none;
+  width: 18rem;
+  background-color: #f2f3f6;
+  height: 2.6rem;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.search__text:focus {
+  outline: none;
+}
+
+.section__top {
+  padding-top: 20px;
+  background-color: #fbf7f2;
+}
+
+.top__inner {
+  width: 1024px;
+  height: 760px;
+  position: relative;
+}
+
+.top__img {
+  position: absolute;
+  right: -173px;
+  bottom: 0;
+  width: 804px;
+  height: 685px;
+
+  /* background-color: #fbf7f2; */
+  /* background-repeat: no-repeat;*/
+  /* background-size: 804px 685px;*/
+}
+
+.top__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.3;
+  padding-top: 270px;
+  margin-bottom: 34px;
+  letter-spacing: -0.4px;
+}
+
+.top__text {
+  font-size: 15px;
+  line-height: 1.5;
+}

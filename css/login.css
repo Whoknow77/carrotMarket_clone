@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url(./reset.css);
 
 body {
   font-family: "Roboto", sans-serif;
@@ -21,17 +17,16 @@ body {
   height: 650px;
   background: white;
 }
-
-header {
+.login__header {
   padding-top: 100px;
 }
 
-h2 {
+.login__title {
   text-align: center;
   padding-bottom: 50px;
 }
 
-form {
+.form {
   text-align: center;
 }
 

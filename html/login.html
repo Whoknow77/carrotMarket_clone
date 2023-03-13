@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="../js/login.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="login__header">
+        <h2 class="login__title">
+          <a href="/carrotMarket_clone/index.html">
+            <img src="../img/home/mainlogo.svg" alt="" />
+          </a>
+        </h2>
+      </header>
+
+      <!-- 로그인 폼 -->
+      <div class="login__form">
+        <form class="form">
+          <div>
+            <input
+              class="login__id"
+              type="text"
+              name="username"
+              placeholder="ID"
+            />
+          </div>
+
+          <div>
+            <input
+              class="login__pw"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="pwfind">
+            <button type="button" class="btn__pwfind">Forget password?</button>
+          </div>
+          <p class="login__warn"></p>
+        </form>
+        <!-- 비밀번호 찾기 폼-->
+        <form action="" class="form pwfind__form">
+          <input
+            class="pwfind__id"
+            type="text"
+            name="pwfind__id"
+            placeholder="ID"
+          />
+          <p class="pwfind__warn"></p>
+          <input type="submit" value="비밀번호 찾기" class="pwfind__submit" />
+        </form>
+        <section class="login__and__signup">
+          <input type="submit" value="login" class="login__submit" />
+          <button type="button" class="btn__signup">회원가입</button>
+        </section>
+      </div>
+
+      <!-- 회원가입 폼-->
+      <form action="" class="form signup__form">
+        <div class="signup__idinput">
+          <div>
+            <input
+              class="signup__id"
+              type="text"
+              name="username"
+              placeholder="ID"
+            />
+            <p class="signup__id__warn"></p>
+          </div>
+
+          <button class="duplication">중복확인</button>
+          <div>
+            <input
+              class="signup__pw"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <p class="signup__pw__warn"></p>
+          </div>
+
+          <div>
+            <input
+              class="signup__email"
+              type="text"
+              name="email"
+              placeholder="email"
+            />
+            <p class="signup__email__warn"></p>
+          </div>
+
+          <div class="mobile__input">
+            <p class="mobile__title">phone:</p>
+            <select class="mobile mobile1">
+              <option value="">선택</option>
+              <option value="011">010</option>
+              <option value="016">016</option>
+              <option value="016">011</option></select
+            >- <input type="text" class="mobile mobile2" size="4" />-
+            <input type="text" class="mobile mobile3" size="4" />
+            <p class="signup__mobile__warn"></p>
+          </div>
+        </div>
+
+        <input type="submit" value="회원가입완료" class="signup__submit" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+/* middle1 */
+.section__middle1 {
+  padding: 60px 0;
+}
+
+.middle1__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1024px;
+}
+
+.middle1__img {
+  width: 532px;
+  height: 684px;
+}
+
+.middle1__title {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.middle1__text {
+  margin-bottom: 50px;
+}
+
+.btn__popular {
+  background-color: #f1f3f5;
+  color: #212529;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 24px;
+  /* display: inline-block; */
+  /* border: none; */
+}
+
+.btn__trust {
+  background-color: #f1f3f5;
+  color: #212529;
+  padding: 20px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10px;
+  /* display: inline-block; */
+  /* border: none; */
+}
+
+.btn__popular:hover,
+.btn__trust:hover {
+  background-color: #eaebee;
+  opacity: 0.5;
+}
+
+/* middle2 */
+
+.section__middle2 {
+  padding: 50px 0;
+  background-color: #e6f3e6;
+}
+
+.middle2__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1024px;
+}
+
+.middle2__title {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.middle2__text {
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.middle2__story {
+  display: flex;
+  align-items: center;
+}
+
+.story__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+/* 아이콘 */
+.story__icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 15px;
+}
+
+.question__icon {
+  background-image: url(../img/home/question.svg);
+}
+
+.center__icon {
+  background-image: url(../img/home/center.svg);
+}
+
+.class__icon {
+  background-image: url(../img/home/class.svg);
+}
+
+/* 아이콘 소제목 */
+.story__title {
+  font-weight: 550;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* 아이콘 내용 */
+.story__text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.middle2__img {
+  position: relative;
+  top: 25px;
+  width: 546px;
+  height: 740px;
+}
+
+/* bottom */
+
+.section__bottom {
+  padding: 80px 0;
+}
+
+.bottom__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1024px;
+}
+
+.bottom__img {
+  width: 526px;
+  height: 735px;
+}
+
+.bottom__title {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.bottom__text {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn__market {
+  background-color: #f1f3f5;
+  color: #212529;
+  border: none;
+  border-radius: 6px;
+  padding: 18px 23px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.btn__market:hover {
+  background-color: #eaebee;
+  opacity: 0.5;
+}
+
+/* fav */
+
+.section__fav {
+  height: 1208px;
+  background-color: #f8f9fa;
+  padding: 70px 0;
+}
+
+.fav__inner {
+  width: 1024px;
+  margin: 60px auto 120px auto;
+}
+
+.fav__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 80px;
+}
+
+.fav__content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.fav__item {
+  width: calc(25% - 44px);
+  margin-right: 44px;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fav__link {
+  color: black;
+}
+
+.fav__info {
+  margin-top: 12px;
+}
+
+.fav__img {
+  /* width:100% => 부모 영역 꽉 채움(원래 부모 영역을 벗어났었음) */
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.fav__itemname {
+  color: #212529;
+  /* 박스를 벗어난 요소들을 가림 */
+  overflow: hidden;
+  /* 공백을 채우지만 줄바꿈 하지 않고 박스를 벗어남 */
+  white-space: nowrap;
+  /* 말줄임표 */
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.fav__price {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.fav__location {
+  font-size: 13px;
+  color: #212529;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.fav__emotion {
+  color: #868e96;
+  font-size: 13px;
+}
+
+.text__center {
+  text-align: center;
+}
+
+.fav__btn__more {
+  text-decoration: underline;
+  color: black;
+  font-weight: 600;
+}
+
+/* keyword */
+
+.section__keyword {
+  width: 1024px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.keyword__title {
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}
+
+.keyword__list {
+  margin-left: 55px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.keyword__item {
+  display: inline-block;
+  padding: 20px;
+}
+
+.keyword__link {
+  color: black;
+}
+
+.keyword__link:hover {
+  text-decoration: underline;
+}
