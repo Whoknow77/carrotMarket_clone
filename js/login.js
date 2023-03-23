@@ -9,7 +9,7 @@ const pwFindBtn = document.querySelector(".btn__pwfind"); // 비밀번호 찾기
 const pwFindSubmit = document.querySelector(".pwfind__submit"); // 비밀번호 찾기 검사
 const pwFindWarn = document.querySelector(".pwfind__warn"); // 비밀번호 찾기 오류
 
-const signupBtn = document.querySelector(".btn__signup"); // 회원가입
+const signupBtn = document.querySelector(".login__btn__signup"); // 회원가입
 const signupSubmit = document.querySelector(".signup__submit"); // 회원가입 검사
 
 const signupId = document.querySelector(".signup__id"); // 아이디

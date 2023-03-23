@@ -1,6 +1,6 @@
 @import url(./reset.css);
 
-body {
+.login__body {
   font-family: "Roboto", sans-serif;
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -90,7 +90,7 @@ body {
 }
 
 .login__submit,
-.btn__signup,
+.login__btn__signup,
 .signup__submit {
   background: rgb(2, 0, 36);
   background: linear-gradient(

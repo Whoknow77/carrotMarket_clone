@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footer {
   border-top: 1px solid #eaebee;
   padding: 0 16px;
@@ -32,7 +33,6 @@
   font-size: 14px;
   color: black;
 }
-
 .otherlink:hover {
   text-decoration: underline;
 }
@@ -76,7 +76,6 @@
 .logo__link {
   padding: 8px;
 }
-
 .logo__link:hover {
   opacity: 0.5;
 }
@@ -88,7 +87,6 @@
   padding: 9px;
   margin-left: 10px;
 }
-
 .nation:hover {
   background-color: #eaebee;
   opacity: 0.5;
@@ -116,21 +114,26 @@
   color: #868b94;
 }
 
-.question__link:hover {
+.question:hover {
   text-decoration: underline;
 }
-.question__link:not(:last-of-type) {
+.question:not(:last-of-type) {
   margin-right: 16px;
 }
 
 .law__link .private {
   color: black;
 }
-
 .law__link:hover {
   text-decoration: underline;
 }
-
 .law__link:not(:last-of-type) {
   margin-right: 16px;
 }
+
+@media (min-width: 900px) {
+  .download {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=footer.css.map */
