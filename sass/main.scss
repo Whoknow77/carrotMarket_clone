@@ -1,0 +1,11 @@
+/* 공통 */
+@import "./common/reset";
+@import "./common/common";
+
+/* 모듈 */
+@import "./page/footer";
+@import "./page/header";
+
+/* 페이지 */
+@import "./page/home";
+@import "./page/login";

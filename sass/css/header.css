@@ -6,59 +6,49 @@
   top: 0;
   background-color: white;
 }
-
 .header__inner {
   max-width: 1200px;
   padding: 10px 12px;
   display: flex;
   justify-content: space-between;
 }
-
 .header__left {
   display: flex;
   align-items: center;
 }
-
 .header__right {
   display: flex;
   align-items: center;
+}
+.header__logo {
+  padding-right: 40px;
+}
+.header__menu {
+  display: none;
 }
 
 .main__logo {
   display: block;
 }
 
-.header__logo {
-  padding-right: 40px;
-}
-
-.header__menu {
-  display: none;
-}
-
 .nav__list {
   display: flex;
 }
-
 .nav__item {
   font-weight: 700;
   font-size: 18px;
 }
-
 .nav__item:not(:last-of-type) {
   padding-right: 30px;
 }
-
 .nav__link {
   color: #4d5159;
 }
-
-.nav__item .orange {
-  color: #ff6f0f;
-}
-
 .nav__link:hover:not(.orange) {
   color: #008c72;
+}
+.nav__item .orange {
+  color: #ff6f0f;
 }
 
 .btn__signup {
@@ -73,7 +63,6 @@
   cursor: pointer;
   margin-left: 20px;
 }
-
 .btn__signup:hover {
   background-color: #eaebee;
   opacity: 0.5;
@@ -85,7 +74,6 @@
   cursor: pointer;
   background: none;
 }
-
 .m__btn__more {
   background: none;
   cursor: pointer;
@@ -104,7 +92,6 @@
   border-radius: 0.4rem;
   font-size: 1rem;
 }
-
 .search__text:focus {
   outline: none;
 }
@@ -116,26 +103,22 @@
     width: 100%;
   }
 }
-
 @media (max-width: 900px) {
   .m__btn__more {
     display: block;
   }
-
   .btn__signup {
     display: none;
   }
 }
-
 @media (min-width: 1100px) {
   .search__text {
     width: 18.8rem;
     display: block;
   }
 }
-
 @media (max-width: 1100px) {
   .m__btn__search {
     display: block;
   }
-}
+}/*# sourceMappingURL=header.css.map */

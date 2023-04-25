@@ -1,29 +1,39 @@
 @import url(./reset.css);
 
-.login__body {
-  font-family: "Roboto", sans-serif;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(228, 66, 47, 1) 0%,
-    rgba(236, 146, 24, 0.8792309159992122) 61%
-  );
-}
-
 .wrapper {
   margin: 150px auto 0 auto;
   width: 450px;
   height: 650px;
   background: white;
 }
-.login__header {
-  padding-top: 100px;
-}
 
-.login__title {
-  text-align: center;
-  padding-bottom: 50px;
+.login {
+  &__body {
+    font-family: "Roboto", sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(228, 66, 47, 1) 0%,
+      rgba(236, 146, 24, 0.8792309159992122) 61%
+    );
+  }
+
+  &__header {
+    padding-top: 100px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  &__warn {
+    padding: 10px;
+    font-size: 12px;
+    color: red;
+    display: inline-block;
+  }
 }
 
 .form {
@@ -33,15 +43,29 @@
 .pwfind {
   margin-bottom: 30px;
   position: relative;
-}
 
-.pwfind__form {
-  color: black;
-  display: none;
-}
+  &__form {
+    color: black;
+    display: none;
 
-.pwfind__form.block {
-  display: block;
+    &.block {
+      display: block;
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    color: orangered;
+  }
+
+  &__warn {
+    color: red;
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+  }
 }
 
 .btn__pwfind {
@@ -55,20 +79,9 @@
   left: 28;
 }
 
-.pwfind__submit {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: none;
-  color: orangered;
-}
-
-.pwfind__warn {
-  color: red;
-  font-size: 12px;
-  padding: 5px 0 5px 0;
-}
-
+/*
+이 부분을 어떻게 나눠야 할지..
+*/
 .login__id,
 .login__pw,
 .signup__id,
@@ -112,27 +125,6 @@
   margin-top: 10px;
 }
 
-.login__warn {
-  padding: 10px;
-  font-size: 12px;
-  color: red;
-  display: inline-block;
-}
-
-.signup__form {
-  display: none;
-  position: relative;
-}
-
-.signup__id__warn,
-.signup__pw__warn,
-.signup__mobile__warn,
-.signup__email__warn {
-  color: red;
-  font-size: 12px;
-  position: absolute;
-}
-
 .duplication {
   cursor: pointer;
   font-size: 20px;
@@ -144,35 +136,45 @@
   position: absolute;
   right: 25;
   top: 15px;
+
+  &:none {
+    display: none;
+  }
 }
 
-.duplication.none {
-  display: none;
-}
+.signup {
+  &__id__warn,
+  &__pw__warn,
+  &__email__warn,
+  &__mobile__warn {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+  }
+  &__id__warn {
+    top: 20;
+    right: 110;
+  }
 
-.signup__id__warn {
-  top: 20;
-  right: 110;
-}
+  &__pw__warn {
+    top: 85;
+    left: 101;
+  }
 
-.signup__pw__warn {
-  top: 85;
-  left: 101;
-}
+  &__email__warn {
+    top: 150;
+    left: 68;
+  }
 
-.signup__email__warn {
-  top: 150;
-  left: 68;
-}
+  &__mobile__warn {
+    top: 220px;
+    left: 126px;
+  }
 
-.signup__mobile__warn {
-  top: 220px;
-  left: 126px;
-}
-
-.mobile__input {
-  display: flex;
-  margin: 0 0 30px 30px;
+  &__form {
+    display: none;
+    position: relative;
+  }
 }
 
 .mobile {
@@ -180,9 +182,14 @@
   outline: none;
   border-bottom: 1px solid gray;
   margin: 0 5px;
-}
 
-.mobile__title {
-  color: gray;
-  font-size: 14px;
+  &__title {
+    color: gray;
+    font-size: 14px;
+  }
+
+  &__input {
+    display: flex;
+    margin: 0 0 30px 30px;
+  }
 }

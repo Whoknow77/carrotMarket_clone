@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@import url(./reset.css);
+.wrapper {
+  margin: 150px auto 0 auto;
+  width: 450px;
+  height: 650px;
+  background: white;
+}
+
+.login__body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(228, 66, 47) 0%, rgba(236, 146, 24, 0.879230916) 61%);
+}
+.login__header {
+  padding-top: 100px;
+}
+.login__title {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.login__warn {
+  padding: 10px;
+  font-size: 12px;
+  color: red;
+  display: inline-block;
+}
+
+.form {
+  text-align: center;
+}
+
+.pwfind {
+  margin-bottom: 30px;
+  position: relative;
+}
+.pwfind__form {
+  color: black;
+  display: none;
+}
+.pwfind__form.block {
+  display: block;
+}
+.pwfind__submit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  color: orangered;
+}
+.pwfind__warn {
+  color: red;
+  font-size: 12px;
+  padding: 5px 0 5px 0;
+}
+
+.btn__pwfind {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: red;
+  text-decoration: none;
+  position: absolute;
+  left: 28;
+}
+
+/*
+이 부분을 어떻게 나눠야 할지..
+*/
+.login__id,
+.login__pw,
+.signup__id,
+.signup__pw,
+.signup__email,
+.pwfind__id {
+  padding: 5px;
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 15px;
+}
+
+.login__and__signup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login__submit,
+.login__btn__signup,
+.signup__submit {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(228, 66, 47) 0%, rgba(236, 146, 24, 0.879230916) 61%);
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  border: none;
+  outline: none;
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.duplication {
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  outline: none;
+  position: absolute;
+  right: 25;
+  top: 15px;
+}
+.duplication:none {
+  display: none;
+}
+
+.signup__id__warn, .signup__pw__warn, .signup__email__warn, .signup__mobile__warn {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+}
+.signup__id__warn {
+  top: 20;
+  right: 110;
+}
+.signup__pw__warn {
+  top: 85;
+  left: 101;
+}
+.signup__email__warn {
+  top: 150;
+  left: 68;
+}
+.signup__mobile__warn {
+  top: 220px;
+  left: 126px;
+}
+.signup__form {
+  display: none;
+  position: relative;
+}
+
+.mobile {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  margin: 0 5px;
+}
+.mobile__title {
+  color: gray;
+  font-size: 14px;
+}
+.mobile__input {
+  display: flex;
+  margin: 0 0 30px 30px;
+}/*# sourceMappingURL=login.css.map */
