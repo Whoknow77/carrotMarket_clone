@@ -145,7 +145,7 @@ a {
   margin: 0 auto;
 }
 
-/* b태그나 strong 태그 적용만 하면 안되길래 그냥 따로 추가.. */
+.bold,
 .fbold {
   font-weight: 700;
   color: #868b94;
@@ -176,22 +176,20 @@ a {
   align-items: flex-start;
 }
 
+.othermenu__item {
+  padding: 18px;
+}
+.othermenu__link {
+  font-size: 14px;
+  color: black;
+}
+.othermenu__link:hover {
+  text-decoration: underline;
+}
 .othermenu__list {
   display: flex;
   flex-direction: column;
   width: 28%;
-}
-
-.othermenu__item {
-  padding: 18px;
-}
-
-.otherlink {
-  font-size: 14px;
-  color: black;
-}
-.otherlink:hover {
-  text-decoration: underline;
 }
 
 .download {
@@ -209,8 +207,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
-.btn__download:hover {
+.download__button:hover {
   background-color: #eaebee;
   opacity: 0.5;
 }
@@ -254,12 +251,6 @@ a {
   font-size: 13px;
 }
 
-/* b태그나 strong 태그 적용만 하면 안되길래 그냥 따로 추가.. */
-.bold {
-  font-weight: 700;
-  color: #868b94;
-}
-
 .question:hover {
   text-decoration: underline;
 }
@@ -291,59 +282,49 @@ a {
   top: 0;
   background-color: white;
 }
-
 .header__inner {
   max-width: 1200px;
   padding: 10px 12px;
   display: flex;
   justify-content: space-between;
 }
-
 .header__left {
   display: flex;
   align-items: center;
 }
-
 .header__right {
   display: flex;
   align-items: center;
+}
+.header__logo {
+  padding-right: 40px;
+}
+.header__menu {
+  display: none;
 }
 
 .main__logo {
   display: block;
 }
 
-.header__logo {
-  padding-right: 40px;
-}
-
-.header__menu {
-  display: none;
-}
-
 .nav__list {
   display: flex;
 }
-
 .nav__item {
   font-weight: 700;
   font-size: 18px;
 }
-
 .nav__item:not(:last-of-type) {
   padding-right: 30px;
 }
-
 .nav__link {
   color: #4d5159;
 }
-
-.nav__item .orange {
-  color: #ff6f0f;
-}
-
 .nav__link:hover:not(.orange) {
   color: #008c72;
+}
+.nav__item .orange {
+  color: #ff6f0f;
 }
 
 .btn__signup {
@@ -358,7 +339,6 @@ a {
   cursor: pointer;
   margin-left: 20px;
 }
-
 .btn__signup:hover {
   background-color: #eaebee;
   opacity: 0.5;
@@ -370,7 +350,6 @@ a {
   cursor: pointer;
   background: none;
 }
-
 .m__btn__more {
   background: none;
   cursor: pointer;
@@ -389,7 +368,6 @@ a {
   border-radius: 0.4rem;
   font-size: 1rem;
 }
-
 .search__text:focus {
   outline: none;
 }
@@ -646,12 +624,6 @@ a {
   text-decoration: underline;
 }
 
-.login__body {
-  font-family: "Roboto", sans-serif;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(228, 66, 47) 0%, rgba(236, 146, 24, 0.879230916) 61%);
-}
-
 .wrapper {
   margin: 150px auto 0 auto;
   width: 450px;
@@ -659,13 +631,23 @@ a {
   background: white;
 }
 
+.login__body {
+  font-family: "Roboto", sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(228, 66, 47) 0%, rgba(236, 146, 24, 0.879230916) 61%);
+}
 .login__header {
   padding-top: 100px;
 }
-
 .login__title {
   text-align: center;
   padding-bottom: 50px;
+}
+.login__warn {
+  padding: 10px;
+  font-size: 12px;
+  color: red;
+  display: inline-block;
 }
 
 .form {
@@ -676,14 +658,24 @@ a {
   margin-bottom: 30px;
   position: relative;
 }
-
 .pwfind__form {
   color: black;
   display: none;
 }
-
 .pwfind__form.block {
   display: block;
+}
+.pwfind__submit {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  color: orangered;
+}
+.pwfind__warn {
+  color: red;
+  font-size: 12px;
+  padding: 5px 0 5px 0;
 }
 
 .btn__pwfind {
@@ -697,20 +689,9 @@ a {
   left: 28;
 }
 
-.pwfind__submit {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: none;
-  color: orangered;
-}
-
-.pwfind__warn {
-  color: red;
-  font-size: 12px;
-  padding: 5px 0 5px 0;
-}
-
+/*
+이 부분을 어떻게 나눠야 할지..
+*/
 .login__id,
 .login__pw,
 .signup__id,
@@ -749,27 +730,6 @@ a {
   margin-top: 10px;
 }
 
-.login__warn {
-  padding: 10px;
-  font-size: 12px;
-  color: red;
-  display: inline-block;
-}
-
-.signup__form {
-  display: none;
-  position: relative;
-}
-
-.signup__id__warn,
-.signup__pw__warn,
-.signup__mobile__warn,
-.signup__email__warn {
-  color: red;
-  font-size: 12px;
-  position: absolute;
-}
-
 .duplication {
   cursor: pointer;
   font-size: 20px;
@@ -782,34 +742,34 @@ a {
   right: 25;
   top: 15px;
 }
-
-.duplication.none {
+.duplication:none {
   display: none;
 }
 
+.signup__id__warn, .signup__pw__warn, .signup__email__warn, .signup__mobile__warn {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+}
 .signup__id__warn {
   top: 20;
   right: 110;
 }
-
 .signup__pw__warn {
   top: 85;
   left: 101;
 }
-
 .signup__email__warn {
   top: 150;
   left: 68;
 }
-
 .signup__mobile__warn {
   top: 220px;
   left: 126px;
 }
-
-.mobile__input {
-  display: flex;
-  margin: 0 0 30px 30px;
+.signup__form {
+  display: none;
+  position: relative;
 }
 
 .mobile {
@@ -818,8 +778,11 @@ a {
   border-bottom: 1px solid gray;
   margin: 0 5px;
 }
-
 .mobile__title {
   color: gray;
   font-size: 14px;
+}
+.mobile__input {
+  display: flex;
+  margin: 0 0 30px 30px;
 }/*# sourceMappingURL=main.css.map */

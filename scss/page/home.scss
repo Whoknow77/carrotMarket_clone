@@ -1,6 +1,3 @@
-$img-width: 600px;
-$img-height: 660px;
-
 /* Section1 */
 
 .section__top {
@@ -17,17 +14,13 @@ $img-height: 660px;
   }
 
   &__inner {
-    width: 1024px;
-    height: 760px;
+    @include size(1024px, 760px);
     position: relative;
   }
 
   &__img {
-    position: absolute;
-    right: -173px;
-    bottom: 0;
-    width: $img-width;
-    height: $img-height;
+    @include position(absolute, null, -173px, null, null);
+    @include size(600px, 600px);
   }
 
   &__text {
@@ -53,15 +46,12 @@ $img-height: 660px;
   }
 
   &__img1 {
-    width: $img-width;
-    height: $img-height;
+    @include size(600px, 600px);
   }
 
   &__img2 {
-    position: relative;
-    top: 25px;
-    width: 546px;
-    height: 740px;
+    @include position(relative, 25px);
+    @include size(546px, 740px);
   }
 
   &__img3 {
@@ -88,8 +78,7 @@ $img-height: 660px;
       }
     }
     .story__icon {
-      width: 56px;
-      height: 56px;
+      @include size(56px, 56px);
       margin-bottom: 15px;
       .question {
         background-image: url(../../img/home/question.svg);
@@ -133,14 +122,6 @@ $img-height: 660px;
 .btn__default + .btn__default {
   margin-left: 1px;
 }
-
-/* Section2 */
-
-/* Section3 */
-
-/* Section4 */
-
-/* fav */
 
 .section__fav {
   height: 1208px;

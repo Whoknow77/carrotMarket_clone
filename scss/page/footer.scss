@@ -29,21 +29,23 @@ $smallfont-color: #868b94;
   }
 }
 
-.othermenu__list {
-  display: flex;
-  flex-direction: column;
-  width: 28%;
-}
+.othermenu {
+  &__item {
+    padding: 18px;
+  }
 
-.othermenu__item {
-  padding: 18px;
-}
+  &__link {
+    font-size: 14px;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-.otherlink {
-  font-size: 14px;
-  color: black;
-  &:hover {
-    text-decoration: underline;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
   }
 }
 
@@ -63,11 +65,13 @@ $smallfont-color: #868b94;
     display: flex;
     justify-content: space-between;
   }
-}
 
-.btn__download:hover {
-  background-color: $borderandbackground-color;
-  opacity: 0.5;
+  &__button {
+    &:hover {
+      background-color: $borderandbackground-color;
+      opacity: 0.5;
+    }
+  }
 }
 
 .logo__list {
@@ -110,11 +114,6 @@ $smallfont-color: #868b94;
   font-size: 13px;
 }
 
-/* b태그나 strong 태그 적용만 하면 안되길래 그냥 따로 추가.. */
-.bold {
-  font-weight: 700;
-  color: $smallfont-color;
-}
 .question {
   &:hover {
     text-decoration: underline;
